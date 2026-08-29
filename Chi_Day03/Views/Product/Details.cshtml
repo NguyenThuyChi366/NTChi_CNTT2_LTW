@@ -1,0 +1,18 @@
+﻿
+@model Chi_Day03.Models.Product
+
+<div class="container mt-4">
+    <h3>Chi tiết sản phẩm</h3>
+    <hr />
+    <h4>Sản phẩm: @Model.Name</h4>
+    <p><strong>Giá gốc:</strong> @Model.Price.ToString("N0") đ</p>
+    <p><strong>Giá mới:</strong> <span class="text-danger">@Model.SalePrice.ToString("N0") đ</span></p>
+    <p><strong>Mô tả:</strong> @Model.Description</p>
+    <p><strong>Trạng thái:</strong> @(Model.Status ? "Còn hàng" : "Hết hàng")</p>
+    <p><strong>Ngày đăng:</strong> @Model.CreatedAt.ToString("dd/MM/yyyy HH:mm:ss")</p>
+
+    <img src="~/picture/@Model.Image" alt="@Model.Name" class="img-fluid mb-3" />
+
+    <a asp-controller="Product" asp-action="ThuỳChi " class="btn btn-danger">Về danh sách</a>
+</div>
+
