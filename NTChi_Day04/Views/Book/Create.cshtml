@@ -1,0 +1,29 @@
+﻿@model NTChi_Day04.Models.Book
+@{
+    ViewData["Title"] = "Thêm mới sách";
+}
+
+<h2>Thêm mới sách</h2>
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="AuthorId"></label>
+        <select asp-for="AuthorId" class="form-control" asp-items="@ViewBag.authors"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="GenreId"></label>
+        <select asp-for="GenreId" class="form-control" asp-items="@ViewBag.genres"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Summary"></label>
+        <textarea asp-for="Summary" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Lưu</button>
+</form>
