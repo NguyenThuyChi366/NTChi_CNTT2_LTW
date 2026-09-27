@@ -1,0 +1,9 @@
+﻿<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2026 - Nguyễn Thùy Chi - <a asp-area="" asp-controller="Home" asp-action="About">Thông tin sinh viên</a>
+
+        <div>
+            @await Component.InvokeAsync("Category", new {active = true})
+        </div>
+    </div>
+</footer>
