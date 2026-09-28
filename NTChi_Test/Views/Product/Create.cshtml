@@ -1,0 +1,65 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model NTChi_Test.Models.Product
+
+<h1>Thêm sản phẩm</h1>
+
+<form asp-controller="Product"
+      asp-action="Create"
+      method="post">
+
+    <div>
+        <label>Tên sản phẩm</label>
+        <input asp-for="Name" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Giá</label>
+        <input asp-for="Price" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Loại sản phẩm</label>
+        <input asp-for="Category" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Số lượng</label>
+        <input asp-for="Quantity" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Mô tả</label>
+        <textarea asp-for="Description"></textarea>
+    </div>
+
+    <br />
+
+    <div>
+        <label>Hình ảnh</label>
+        <input asp-for="ImageUrl" />
+    </div>
+
+    <br />
+
+    <button type="submit">
+        Thêm sản phẩm
+    </button>
+
+    <a asp-controller="Product"
+       asp-action="Index">
+        Quay lại
+    </a>
+
+</form>
